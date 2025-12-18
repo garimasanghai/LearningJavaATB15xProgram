@@ -1,6 +1,6 @@
 package Java_Basics_01;
 
-public class Lab002_PrintF {
+public class Lab002_PrintF_ForLoop {
     public static void main(String[] args) {
         int num =9;
 
