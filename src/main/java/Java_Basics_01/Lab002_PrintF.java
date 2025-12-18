@@ -1,0 +1,12 @@
+package Java_Basics_01;
+
+public class Lab002_PrintF {
+    public static void main(String[] args) {
+        int num =9;
+
+        for(int i = 1; i<=10; i++){
+            System.out.printf("%d * %d = %d", num,i,num*i);
+            System.out.println();
+        }
+    }
+}
