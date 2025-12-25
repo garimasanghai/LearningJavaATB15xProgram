@@ -2,7 +2,7 @@ package Java_Basics_01;
 
 import java.util.Scanner;
 
-public class Lab_013_Switch_UserInput_IfElse {
+public class Lab013_Switch_UserInput_IfElse {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
