@@ -6,23 +6,23 @@ public class Lab007_Scanner {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter Subject : ");
-        String Subject = scan.next();
+        System.out.println("Enter Subject:");
+        String sub = scan.next().toLowerCase();
 
-        scan.nextLine();
+        if (sub.equals("maths") || sub.equals("english") || sub.equals("science") || sub.equals("sst") || sub.equals("env")) {
 
-        System.out.println("Enter Marks : ");
-        int Marks = scan.nextInt();
+            System.out.println("Enter Marks:");
+            int marks = scan.nextInt();
 
-//        System.out.println("grade : ");
-//        String grade = scan.next();
+            String result = marks >= 30 ? "Pass" : "Fail";
+            System.out.println(result);
 
-        String result = Marks >= 30 ? "Pass" : "Fail";
-        System.out.println(result);
+            char score = marks > 90 ? 'A' : (marks > 70 ? 'B' : 'C');
+            System.out.println(score);
 
-        char Score = Marks > 90 ? 'A' : (Marks < 90 && Marks > 70) ? 'B' : 'C';
-        System.out.println(Score);
-
+        } else {
+            System.out.println("Invalid subject entered");
+        }
         scan.close();
     }
 }
