@@ -8,6 +8,7 @@ public class Lab014_Switch_Drivers {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your Browser: ");
         String browser = sc.next();
+        browser = browser.toLowerCase(); //To ignore regardless of the capital/small
 
       /*
        == → compares objects
