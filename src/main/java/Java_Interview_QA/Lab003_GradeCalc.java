@@ -34,5 +34,6 @@ public class Lab003_GradeCalc {
         else {
             System.out.println("Grade F");
         }
+        sc.close();
     }
 }
