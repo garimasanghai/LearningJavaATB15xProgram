@@ -19,7 +19,7 @@ public class Lab016_RecurringUserInput {
                 System.out.println("Enter Marks :");
                 int marks = scan.nextInt();
 
-                // Pass / Fail check
+                // Pass / Fail condition check
                 if (marks >= 30) {
                     System.out.println("Pass");
                 } else {

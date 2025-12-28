@@ -14,7 +14,7 @@ public class Lab009_RecurringUserInput {
                 System.out.println("Proceed Further");
                 break;
             } else {
-                System.out.println("Enter Number in between 70 to 90");
+                System.out.println("Enter Number in between 70 - 90");
             }
         }
         scan.close();
