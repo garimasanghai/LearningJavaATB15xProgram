@@ -1,8 +1,8 @@
-package Revision_Concepts;
+package Java_Basics_01;
 
 import java.util.Scanner;
 
-public class Lab010_RecurringUserInput01 {
+public class Lab016_RecurringUserInput {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 

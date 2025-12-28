@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Lab009_RecurringUserInput {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        for (; ; ) {
+        for (; ; ) // infinite loop: Keep asking the user again and again, until input is correct
+        {
             System.out.println("Enter the number :");
             int number = scan.nextInt();
 
