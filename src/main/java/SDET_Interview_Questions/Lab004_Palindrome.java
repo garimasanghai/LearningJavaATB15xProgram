@@ -10,13 +10,12 @@ public class Lab004_Palindrome {
         String clean = ""; //clean the word (keep only letters and numbers)
 
         for (int i = word.length() - 1; i >= 0; i--) {
-            clean = clean + word.charAt(i);
+            clean = clean + word.charAt(i); //The box fills letter by letter, but backwards
             /*
              <---    <---      <---
             word.charAt(i) → “Give me one letter”
             clean + → “Add that letter to my box”
             clean = → “Put it back in the box”
-            The box fills letter by letter, but backwards
             */
         }
         if (word.equals(clean)) {    //“Is the original word same as the backward word?”
