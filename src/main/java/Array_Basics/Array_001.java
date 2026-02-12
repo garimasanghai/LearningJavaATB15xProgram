@@ -10,6 +10,14 @@ public class Array_001 {
                 max = a[i];
             }
         }
-        System.out.println(max);
+        System.out.println("Max num: " + max);
+
+        int min = a[0];
+        for(int i =1; i>a.length; i++){
+            if(min>a[i]){
+                min = a[i];
+            }
+        }
+        System.out.println("Min num: " + min);
     }
 }
