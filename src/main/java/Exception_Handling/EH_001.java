@@ -14,6 +14,10 @@ public class EH_001 {
                 System.out.println(100 / 0);
             } catch (Exception e) {
                 System.out.println(e);
+                System.out.println("e.getMessage() ---> " + e.getMessage());
+                System.out.println("e.toString() ---> " + e.toString());
+                System.out.println("e.printStackTrace() ---> "); e.printStackTrace();
+
             }
         }
 }
