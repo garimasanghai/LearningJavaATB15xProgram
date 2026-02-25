@@ -34,12 +34,12 @@ public class Katalon_Appointment {
         Assert.assertEquals(driver.getCurrentUrl(), "https://katalon-demo-cura.herokuapp.com/#appointment");
         //WebElement display_makeappointment = driver.findElement(By.tagName("h2"));
         //display_makeappointment.getText();
-        // <---- Since u have to store the value u have to store it in String
+        // <---- Cannot write abv statement, since u have to store the value & cross verify using assert
 
         String display_makeappointment = driver.findElement(By.className("text-center")).getText();
         Assert.assertEquals(display_makeappointment, "Make Appointment");
         System.out.println("Test exe");
 
-        //driver.quit();
+        driver.quit();
     }
 }
