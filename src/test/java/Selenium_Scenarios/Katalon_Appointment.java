@@ -18,7 +18,6 @@ public class Katalon_Appointment {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://katalon-demo-cura.herokuapp.com/");
 
-
         WebElement appointment_btn = driver.findElement(By.id("btn-make-appointment"));
         appointment_btn.click();
 
