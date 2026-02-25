@@ -17,7 +17,7 @@ public class FacebookForgotPwd {
 
         driver.findElement(By.partialLinkText("Forgotten password?")).click();
         System.out.println("Its exe");
-        driver.findElement(By.id("_r_2_")).sendKeys("9593255556");
+        driver.findElement(By.id("_r_2_")).sendKeys("9832467655");
         driver.findElement(By.xpath("(//div[@role='none'])[2]")).click();
         Thread.sleep(2000);
         /*System.out.println("navigating");
