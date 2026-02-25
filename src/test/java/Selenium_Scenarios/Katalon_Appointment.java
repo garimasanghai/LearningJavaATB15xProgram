@@ -31,7 +31,6 @@ public class Katalon_Appointment {
         WebElement login_btn = driver.findElement(By.id("btn-login"));
         login_btn.click();
         Thread.sleep(5000);
-
         Assert.assertEquals(driver.getCurrentUrl(), "https://katalon-demo-cura.herokuapp.com/#appointment");
         //WebElement display_makeappointment = driver.findElement(By.tagName("h2"));
         //display_makeappointment.getText();
@@ -39,6 +38,7 @@ public class Katalon_Appointment {
 
         String display_makeappointment = driver.findElement(By.className("text-center")).getText();
         Assert.assertEquals(display_makeappointment, "Make Appointment");
+        System.out.println("Test exe");
 
         //driver.quit();
     }
