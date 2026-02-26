@@ -1,4 +1,4 @@
-package SuperKeyword;
+package OOPS_Concepts.SuperKeyword;
 
 //For Super the concept of Inheritance is necessarys
 public class Super_Keyword1 {

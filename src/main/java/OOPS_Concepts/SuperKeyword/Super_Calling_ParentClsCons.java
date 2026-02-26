@@ -1,4 +1,4 @@
-package SuperKeyword;
+package OOPS_Concepts.SuperKeyword;
 
 
 // In case of Method, Super keyword is used, In case of cons super() is used
