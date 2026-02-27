@@ -2,7 +2,6 @@ package Selenium_Scenarios;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -11,7 +10,7 @@ import java.time.Duration;
 
 public class Bank_Digital {
     @Test
-    public  void test_Bank_Digital () throws InterruptedException {
+    public void test_Bank_Digital() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -32,9 +31,10 @@ public class Bank_Digital {
 
         driver.findElement(By.xpath("//button[contains(text(), 'Confirm Transfer')]")).click();
         Thread.sleep(2000);
+
         driver.findElement(By.xpath("//button[contains(text(), 'Dashboard')]")).click();
         String balanceText = driver.findElement(By.xpath("//h3[contains(text(),'$')]")).getText();
-              //  driver.findElement(By.xpath("//p[text() = 'Total Balance']/../h3")).getText();
+        // driver.findElement(By.xpath("//p[text() = 'Total Balance']/../h3")).getText();
         Assert.assertEquals(balanceText, "$45,000.00");
         System.out.println("Test exe");
 
