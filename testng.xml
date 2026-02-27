@@ -5,7 +5,7 @@
 
     <test name="SampleTest">
         <classes>
-            <class name="Selenium_Scenarios.Katalon_Appointment"/>
+            <class name="Selenium_Scenarios.Bank_Digital"/>
         </classes>
     </test>
 
