@@ -1,4 +1,4 @@
-package Revision_Concepts;
+package Java_Basics_01;
 
 public class Lab003 {
     public static void main(String[] args) {

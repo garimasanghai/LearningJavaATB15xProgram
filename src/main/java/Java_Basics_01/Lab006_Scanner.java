@@ -1,4 +1,4 @@
-package Revision_Concepts;
+package Java_Basics_01;
 
 import java.util.Scanner;
 

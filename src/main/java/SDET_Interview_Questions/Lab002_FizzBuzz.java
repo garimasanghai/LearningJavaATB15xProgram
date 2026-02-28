@@ -1,4 +1,4 @@
-package Java_Interview_QA;
+package SDET_Interview_Questions;
 
 /*
 Write a program that prints numbers from 1 to 100.

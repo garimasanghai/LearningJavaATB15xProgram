@@ -1,4 +1,4 @@
-package Revision_Concepts;
+package SDET_Interview_Questions;
 
 import java.util.Scanner;
 

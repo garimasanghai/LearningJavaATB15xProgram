@@ -1,4 +1,4 @@
-package Java_Interview_QA;
+package SDET_Interview_Questions;
  /*
  (all sides are equal),
 isosceles (exactly two sides are equal),

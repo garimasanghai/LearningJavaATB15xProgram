@@ -1,4 +1,4 @@
-package Java_Interview_QA;
+package SDET_Interview_Questions;
 
 /*
 Calculate and display:
