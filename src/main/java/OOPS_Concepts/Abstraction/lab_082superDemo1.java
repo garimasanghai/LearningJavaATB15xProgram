@@ -1,48 +1,17 @@
 package OOPS_Concepts.Abstraction;
 
-public class lab_082superDemo1 {
-    public static void main(String[] args) {
-        Car c = new Car();
-
-    }
-
-
-}
-//Creating a new car that inherits vehicle
-class Car extends Vehicle{
-    private int maxSpeed = 281;
-
-    @Override
-    void display() {
-        System.out.println("Child");
-    }
-//This is new
-    Car(){
-        super(10);
-        System.out.println("DC Car");
-        System.out.println(this.maxSpeed);
-        System.out.println(super.maxSpeed);
-        this.display();
-        super.display();
-    }
-
-}
-
-
-
-class Vehicle{
+class Vehicle {
     public int maxSpeed = 180;
 
-    void display(){
+    void display() {
         System.out.println("Parent");
     }
 
-
-    Vehicle(){
+    Vehicle() {
         System.out.println("DC Vehicle");
     }
 
-    Vehicle(int a){
+    Vehicle(int a) {
         System.out.println("PC Vehicle");
     }
 
@@ -52,5 +21,39 @@ class Vehicle{
 
     void message(int a) {
         System.out.println("Hello Vehicle");
+    }
+}
+
+//Creating a new car that inherits vehicle
+class Car extends Vehicle {
+    private int maxSpeed;
+
+    void setSpeed(int speed) {
+        maxSpeed = speed;
+    }
+
+    void getSpeed() {
+        System.out.println(maxSpeed);
+    }
+
+    @Override
+    void display() {
+        System.out.println("Child");
+    }
+
+    //This is new
+    Car() {                              //Constructor
+        super(10);
+        System.out.println("DC Car");
+        System.out.println(this.maxSpeed);
+        System.out.println(super.maxSpeed);
+        this.display();
+        super.display();
+    }
+}
+
+public class lab_082superDemo1 {
+    public static void main(String[] args) {
+        Car c = new Car();
     }
 }
