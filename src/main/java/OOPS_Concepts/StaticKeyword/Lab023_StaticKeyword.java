@@ -1,4 +1,4 @@
-package Java_Beginner_Progs;
+package OOPS_Concepts.StaticKeyword;
 
 public class Lab023_StaticKeyword {
     static int emp_id = 101;

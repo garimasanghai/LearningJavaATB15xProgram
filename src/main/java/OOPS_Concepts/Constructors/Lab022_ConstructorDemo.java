@@ -1,4 +1,4 @@
-package Java_Beginner_Progs;
+package OOPS_Concepts.Constructors;
 
 public class Lab022_ConstructorDemo {
     String name;
