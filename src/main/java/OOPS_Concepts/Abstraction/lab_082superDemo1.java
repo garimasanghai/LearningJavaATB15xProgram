@@ -32,8 +32,8 @@ class Car extends Vehicle {
         maxSpeed = speed;
     }
 
-    void getSpeed() {
-        System.out.println(maxSpeed);
+    public int getSpeed() {
+        return maxSpeed;
     }
 
     @Override
