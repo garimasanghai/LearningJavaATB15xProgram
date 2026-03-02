@@ -19,12 +19,11 @@ public class OrangeCRM_Demo01 {
         }
 
         WebElement input_username = driver.findElement(By.xpath("//input[@name='username']"));
+        input_username.sendKeys("admin");
         WebElement input_password = driver.findElement(By.xpath("//input[@placeholder='Password']"));
+        input_password.sendKeys("Hacker@4321");
         WebElement button = driver.findElement(By.xpath("//button"));
 //        WebElement button = driver.findElement(By.xpath("//button[@type=\"submit\"]"));
-
-        input_username.sendKeys("admin");
-        input_password.sendKeys("Hacker@4321");
         button.click();
 
         try {
@@ -33,10 +32,8 @@ public class OrangeCRM_Demo01 {
             throw new RuntimeException(e);
         }
 
-        WebElement h6 = driver.findElement(By.xpath("//span[@class=\"oxd-topbar-header-breadcrumb\"]/h6"));
-
+        WebElement h6 = driver.findElement(By.xpath("//h6[text() = 'PIM']"));
         Assert.assertEquals(h6.getText(), "PIM");
-
 
         driver.quit();
     }
