@@ -29,10 +29,15 @@ public class OrangeCrm_WebTable {
         String txt = driver.findElement(By.xpath("//h6[text() = 'PIM']")).getText();
         System.out.println("Displayed text: " + txt);
 
-        /*
-        WebElement table = driver.findElement(By.xpath("//div[@role= 'table']"));
-        WebElement body = driver.findElement(By.xpath("//div[@role='table']/div[contains(@class,'oxd-table-body')]"));
+        //To get the name of the emp who got terminated:
+
+        /*WebElement name = driver.findElement(By.xpath("//div[@role='row'][.//div[text()='Terminated']]//div[@role='cell'][3]//div"));
+        System.out.println(name.getText());
         */
+
+        //div[@role= 'row'] <--- Find the row
+        // [.//div[text()='Terminated']] <--- that contains Terminated
+        // div[text() = 'Akshay Dilip'] <--- go up // div and then trace down to text that conatins the intended emp name
 
         WebElement employee = driver.findElement(By.xpath("//div[@role='row'][.//div[text()='Terminated']]//div[text()='Akshay Dilip']"));
         driver.findElement(By.xpath("(//i[@class = 'oxd-icon bi-trash'])[3]")).click();
