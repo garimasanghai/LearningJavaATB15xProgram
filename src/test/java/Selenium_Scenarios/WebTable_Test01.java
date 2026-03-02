@@ -10,7 +10,7 @@ import java.time.Duration;
 
 //add 5 emp. Delete the first emp whose dept is legal
 
-public class DemoQaWebTable {
+public class WebTable_Test01 {
     @Test
     public void test1() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
