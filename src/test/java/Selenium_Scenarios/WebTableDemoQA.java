@@ -76,7 +76,7 @@ public class WebTableDemoQA {
         WebElement delRecord = driver.findElement(By.id("delete-record-3"));
         delRecord.click();
 
-        Thread.sleep(4000);
+        Thread.sleep(10000);
         System.out.println("Test Exe");
 
         driver.quit();
