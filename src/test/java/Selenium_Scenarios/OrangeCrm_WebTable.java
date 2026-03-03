@@ -39,14 +39,10 @@ public class OrangeCrm_WebTable {
         // [.//div[text()='Terminated']] <--- that contains Terminated
         // div[text() = 'Akshay Dilip'] <--- go up // div and then trace down to text that conatins the intended emp name
 
-        //WebElement employee = driver.findElement(By.xpath("//div[@role='row'][.//div[text()='Terminated']]//div[text()='Akshay Dilip']"));
         WebElement employee = driver.findElement(By.xpath("//div[@role='row'][.//div[text()='Terminated']]"));
-
         driver.findElement(By.xpath("(//i[@class = 'oxd-icon bi-trash'])[3]")).click();
         Thread.sleep(4000);
 
         driver.quit();
-
-
     }
 }
