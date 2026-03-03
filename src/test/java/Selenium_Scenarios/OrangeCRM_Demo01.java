@@ -36,9 +36,6 @@ public class OrangeCRM_Demo01 {
         WebElement h6 = driver.findElement(By.xpath("//h6[text() = 'PIM']"));
         Assert.assertEquals(h6.getText(), "PIM");
 
-        
-
-
         driver.quit();
     }
 }

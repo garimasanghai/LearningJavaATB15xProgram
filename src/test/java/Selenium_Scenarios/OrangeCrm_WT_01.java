@@ -39,7 +39,5 @@ public class OrangeCrm_WT_01 {
         System.out.println("Practice Test exe");
 
         driver.quit();
-
-
     }
 }
