@@ -1,10 +1,9 @@
-package Selenium_Scenarios;
+package Selenium_WebTable_Scenarios;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.qameta.allure.Description;
-import static org.assertj.core.api.Assertions.*;
 import org.testng.annotations.Test;
 
 public class WebTable_Demo01 {
