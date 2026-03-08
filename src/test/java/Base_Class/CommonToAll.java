@@ -17,31 +17,34 @@ public class CommonToAll {
         driver.manage().window().maximize();
     }
 
-
     public void closeBrowser(WebDriver driver){
         driver.quit();
     }
 
-    public void waitForVisibility(WebDriver driver, int timeInSeconds,String xpath){
+    public void waitForVisibility(WebDriver driver, int timeInSeconds,By locator){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
-    public void waitForVisibility(WebDriver driver, String xpath){
+
+    public void waitForVisibility(WebDriver driver, By locator){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-
-    public void waitForTextToBePresent(WebDriver driver, int timeInSeconds,String xpath,String text){
+    public void waitForTextToBePresent(WebDriver driver, int timeInSeconds,By locator,String text){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
-        wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath(xpath)),text));
+        wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(locator),text));
     }
+
+  /*  Java will show this:
+    waitForTextToBePresent(By.id("status"), 10, "Success");
+    waitForTextToBePresent(By.cssSelector(".msg"), 10, "Saved");
+    waitForTextToBePresent(By.xpath("//div[@role='alert']"), 10, "Invalid");*/
 
     public void waitForAlert(WebDriver driver, int timeInSeconds){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
         wait.until(ExpectedConditions.alertIsPresent());
     }
-
 
     public void waitForJVM(int time){
         try {
@@ -51,8 +54,8 @@ public class CommonToAll {
         }
     }
 
-    public void clickElementFound(String xpath){
-        WebElement element = driver.findElement(By.xpath(xpath));
+    public void clickElementFound(By locator){
+        WebElement element = driver.findElement(locator);
         element.click();
     }
 
