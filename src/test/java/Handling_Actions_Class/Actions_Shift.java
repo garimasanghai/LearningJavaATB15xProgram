@@ -18,7 +18,7 @@ public class Actions_Shift extends CommonToAll {
         driver = new ChromeDriver();
         openBrowser(driver,"https://www.facebook.com/");
 
-        WebElement emailBox = waitForVisibility(driver, 5, By.name("email"));
+        WebElement emailBox = waitForVisibility(driver, 5, By.name("email")); // returns emailBox where u can do sendKeys
 
         Actions actions = new Actions(driver);
         actions.click(emailBox)              // focus

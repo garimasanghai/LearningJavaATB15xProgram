@@ -59,7 +59,7 @@ public class CommonToAll {
         }
     }
 
-    public void clickElementFound(By locator){
+    public void waitForClickableElement(By locator){
         WebElement element = driver.findElement(locator);
         element.click();
     }
