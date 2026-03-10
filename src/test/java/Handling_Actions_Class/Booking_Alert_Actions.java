@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 
 public class Booking_Alert_Actions extends CommonToAll {
     @Test
-
     public void searchFlight(){
         driver = new ChromeDriver();
         openBrowser(driver, "https://booking.com");
