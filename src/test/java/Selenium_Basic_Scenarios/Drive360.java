@@ -26,6 +26,5 @@ public class Drive360 {
         System.out.println("Error msg successfully displayed");
 
         driver.quit();
-
     }
 }

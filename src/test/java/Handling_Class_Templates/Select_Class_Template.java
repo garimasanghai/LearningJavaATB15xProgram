@@ -1,4 +1,4 @@
-package Handling_WebElements_Class;
+package Handling_Class_Templates;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

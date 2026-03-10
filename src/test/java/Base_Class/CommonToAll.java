@@ -21,9 +21,14 @@ public class CommonToAll {
         driver.quit();
     }
 
-    public void waitForVisibility(WebDriver driver, int timeInSeconds,By locator){
+   /* public void waitForVisibility(WebDriver driver, int timeInSeconds,By locator){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }*/
+
+    public WebElement waitForVisibility(WebDriver driver, int timeInSeconds,By locator){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public void waitForVisibility(WebDriver driver, By locator){

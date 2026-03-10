@@ -31,16 +31,15 @@ public class SvgMap_SrchTripura extends CommonToAll {
         */
 
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+       /* WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 
         WebElement tripuraEle = wait.until(ExpectedConditions.elementToBeClickable(
                         By.xpath("//*[name()='svg']//*[contains(@aria-label,'Tripura')]")));
         tripuraEle.click();
         System.out.println("Element Clicked");
-
+*/
         closeBrowser(driver);
-
     }
 
 }
