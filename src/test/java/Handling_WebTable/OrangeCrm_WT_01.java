@@ -1,4 +1,4 @@
-package Selenium_WebTable_Scenarios;
+package Handling_WebTable;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class OrangeCrm_WT_02 {
+public class OrangeCrm_WT_01 {
     @Test
-    public void test_wt1() throws InterruptedException {
+    public void test_wt() throws InterruptedException {
         WebDriver driver; // declaring it global
 
         driver = new ChromeDriver();
@@ -33,8 +33,10 @@ public class OrangeCrm_WT_02 {
         String txt = driver.findElement(By.xpath("//h6[text() = 'PIM']")).getText();
         System.out.println("Displayed text: " + txt);
 
-        WebElement txt2 = driver.findElement(By.xpath("//div[text() = 'Working']/ancestor::div[@role='row']//div[4]"));
-        System.out.println("The emp is: " + txt2.getText());
+        WebElement text=  driver.findElement(By.xpath("//div[text() = 'Working']/ancestor::div[@role='row']//div[4]"));
+        System.out.println(text.getText());
+        Thread.sleep(3000);
+        System.out.println("Practice Test exe");
 
         driver.quit();
     }

@@ -1,4 +1,4 @@
-package Selenium_WebTable_Scenarios;
+package Handling_WebTable;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

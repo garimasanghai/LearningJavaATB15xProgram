@@ -1,4 +1,4 @@
-package Selenium_Explicit_Wait;
+package Handling_Explicit_Wait;
 
 import Base_Class.CommonToAll;
 import Base_Class.WaitHelpers;

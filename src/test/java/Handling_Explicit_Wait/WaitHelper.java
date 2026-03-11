@@ -1,4 +1,4 @@
-package Selenium_Explicit_Wait;
+package Handling_Explicit_Wait;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
