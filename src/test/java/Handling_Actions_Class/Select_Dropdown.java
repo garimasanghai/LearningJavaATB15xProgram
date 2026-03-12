@@ -1,4 +1,4 @@
-package Handling_Alerts;
+package Handling_Actions_Class;
 
 import Base_Class.CommonToAll;
 import Base_Class.WaitHelpers;

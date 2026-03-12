@@ -1,0 +1,41 @@
+Correct Execution Order:
+1. Capture the current window (parent)
+
+String parentWindow = driver.getWindowHandle();
+This gives the ID of the window where Selenium is currently working.
+
+2. Perform the action that opens a new window
+
+driver.findElement(By.id("openWindow")).click();
+At this moment the child window opens.
+
+3. Get all window handles
+Now Selenium can see both windows.
+
+Set<String> allWindows = driver.getWindowHandles();
+
+Example internally:
+[CDwindow-A1, CDwindow-B2]
+Window	ID
+Parent	CDwindow-A1
+Child	CDwindow-B2
+
+4. Switch to the child window
+for(String window : allWindows){
+
+    if(!window.equals(parentWindow)){
+        driver.switchTo().window(window);
+        break;
+    }
+}
+
+Now Selenium control moves to: CDwindow-B2
+From here onward, all actions happen in the child window.
+Example:
+driver.getTitle();
+driver.findElement(...).click();
+
+5. Switch back to the parent window, After finishing work in the child window:
+
+driver.switchTo().window(parentWindow);
+Now Selenium control returns to the original window.
