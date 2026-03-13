@@ -1,4 +1,4 @@
-package Handling_Actions_Class;
+package Handling_Select_Class;
 
 import Base_Class.CommonToAll;
 import Base_Class.WaitHelpers;
