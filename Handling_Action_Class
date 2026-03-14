@@ -20,8 +20,8 @@ Perform execution
 | Drawing or gestures | Canvas interaction         |
 
 
-| Method            | Use Case             |
-| ----------------- | -------------------- |
+| Method          | Use Case             |
+| --------------- | -------------------- |
 | moveToElement() | Hover over element   |
 | click()         | Click                |
 | doubleClick()   | Double click         |
@@ -60,6 +60,20 @@ WebElement source = driver.findElement(By.id("drag"));
 WebElement target = driver.findElement(By.id("drop"));
 Actions actions = new Actions(driver);
 actions.dragAndDrop(source, target).perform();
+
+Keyboard Combination:
+Actions actions = new Actions(driver);
+actions.keyDown(Keys.CONTROL)
+       .sendKeys("a")
+       .keyUp(Keys.CONTROL)
+       .perform();
+
+actions.click(goingTextbox)      // Moves the cursor to the element
+       .sendKeys("del")
+       .sendKeys(Keys.TAB)       // moves the focus to the next UI element
+       .sendKeys(Keys.ENTER)     // used to select a suggestion from a dropdown
+       .build()
+       .perform();
 
 | Method          | Syntax                                          | Purpose                      | Example Scenario        |
 | --------------- | ----------------------------------------------- | --------------------------   | ----------------------- |
