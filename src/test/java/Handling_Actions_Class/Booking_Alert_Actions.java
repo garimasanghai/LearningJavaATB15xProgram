@@ -29,9 +29,10 @@ public class Booking_Alert_Actions extends CommonToAll {
       // WebElement drpDown = waitForVisibility(driver, 1,By.xpath("(//li[@data-ui-name = 'locations_list_item'])[1]/span[3]/div"));
 
         Actions actions= new Actions(driver);
-        actions.click(goingTextbox).sendKeys("del")
-                .sendKeys(Keys.TAB)
-                .sendKeys(Keys.ENTER)
+        actions.click(goingTextbox)     // Moves the cursor to the element
+                .sendKeys("del")
+                .sendKeys(Keys.TAB)     // moves the focus to the next UI element
+                .sendKeys(Keys.ENTER)   // used to select a suggestion from a dropdown
                 .build()
                 .perform();
 

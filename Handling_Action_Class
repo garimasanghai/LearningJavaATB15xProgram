@@ -1,0 +1,79 @@
+
+Create Actions Object
+        ↓
+Add interactions
+(move, click, drag, key press)
+        ↓
+Build sequence
+        ↓
+Perform execution
+
+
+| Scenario            | Why Actions is Required    |
+| ------------------- | -------------------------- |
+| Hover menus         | Menu appears only on hover |
+| Drag and Drop       | Element must be dragged    |
+| Right Click         | Context menu interaction   |
+| Double Click        | Special UI behaviour       |
+| Keyboard shortcuts  | CTRL+C, CTRL+A             |
+| Click and hold      | Sliders or resize bars     |
+| Drawing or gestures | Canvas interaction         |
+
+
+| Method            | Use Case             |
+| ----------------- | -------------------- |
+| moveToElement() | Hover over element   |
+| click()         | Click                |
+| doubleClick()   | Double click         |
+| contextClick()  | Right click          |
+| dragAndDrop()   | Drag element         |
+| clickAndHold()  | Hold mouse           |
+| release()       | Release held mouse   |
+| sendKeys()      | Keyboard typing      |
+| keyDown()       | Press keyboard key   |
+| keyUp()         | Release keyboard key |
+
+Mouse hover:
+actions
+.moveToElement(menu)
+.click(subMenu)
+.build()
+.perform();
+
+Syntax:
+WebElement menu = driver.findElement(By.xpath("//a[text()='Menu']"));
+Actions actions = new Actions(driver);
+actions.moveToElement(menu).perform();
+
+Double click:
+WebElement element = driver.findElement(By.id("doubleClickBtn"));
+Actions actions = new Actions(driver);
+actions.doubleClick(element).perform();
+
+Right click:
+WebElement element = driver.findElement(By.id("contextMenu"));
+Actions actions = new Actions(driver);
+actions.contextClick(element).perform();
+
+Drag & Drop:
+WebElement source = driver.findElement(By.id("drag"));
+WebElement target = driver.findElement(By.id("drop"));
+Actions actions = new Actions(driver);
+actions.dragAndDrop(source, target).perform();
+
+| Method          | Syntax                                          | Purpose                      | Example Scenario        |
+| --------------- | ----------------------------------------------- | --------------------------   | ----------------------- |
+| moveToElement() | actions.moveToElement(element).perform();       | Hover over element           | Open dropdown menu      |
+| click()         | actions.click(element).perform();               | Click using mouse simulation | When normal click fails |
+| doubleClick()   | actions.doubleClick(element).perform();         | Double click action          | Open editor             |
+| contextClick()  | actions.contextClick(element).perform();        | Right click                  | Context menu            |
+| clickAndHold()  | actions.clickAndHold(element).perform();        | Hold mouse button            | Drag start              |
+| release()       | actions.release().perform();                    | Release mouse                | Drop element            |
+| dragAndDrop()   | actions.dragAndDrop(src, dest).perform();       | Drag element                 | Drag box                |
+| dragAndDropBy() | actions.dragAndDropBy(element, x, y).perform(); | Move element by coordinates  | Slider movement         |
+| sendKeys()      | actions.sendKeys(Keys.ENTER).perform();         | Keyboard action              | Submit form             |
+| keyDown()       | actions.keyDown(Keys.CONTROL)                   | Hold key                     | CTRL selection          |
+| keyUp()         | actions.keyUp(Keys.CONTROL)                     | Release key                  | End keyboard combo      |
+| build()         | actions.build().perform();                      | Execute multiple actions     | Complex workflow        |
+
+
