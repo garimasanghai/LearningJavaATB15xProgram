@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Vwo_Project1 {
+public class Vwo_Help_Project1 {
 
     @Test
     public void test_all(){
