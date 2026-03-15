@@ -68,6 +68,8 @@ actions.keyDown(Keys.CONTROL)
        .keyUp(Keys.CONTROL)
        .perform();
 
+
+
 actions.click(goingTextbox)      // Moves the cursor to the element
        .sendKeys("del")
        .sendKeys(Keys.TAB)       // moves the focus to the next UI element
