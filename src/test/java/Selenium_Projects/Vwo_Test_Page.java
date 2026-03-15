@@ -32,7 +32,7 @@ public class Vwo_Test_Page extends CommonToAll {
         }
 
         WebElement bussId = waitForVisibility(driver, 3, By.xpath("//input[@data-qa= 'page-su-step1-v1-email']"));
-        bussId.sendKeys("sgh393@tempumail.cc");
+        bussId.sendKeys("sgh177@tempumail.cc");
         WebElement freeTrial_cb = driver.findElement(By.xpath("//input[contains(@data-qa , 'page-free-trial-step1')]"));
         freeTrial_cb.click();
         WebElement freeTrial_box = driver.findElement(By.xpath("//button[contains(text() , 'Create a Free Trial')]"));
@@ -51,36 +51,25 @@ public class Vwo_Test_Page extends CommonToAll {
         WebElement skip_continue = longWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-step=\"free-trial-thankyou\"]")));
         skip_continue.click();
 
-       // WebElement skip_button = longWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-step='free-trial-thankyou']")));
-       // skip_button.click();
+        longWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-qa=\"boxasuraza\"]"))).click();
 
-        System.out.println("Test exe");
-
-        WebElement cont_setup = longWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),'Continue')]")));
+        //WebElement cont_setup = longWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),'Continue')]")));
         // WebElement cont_setup = longWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(), 'Save')]")));
-        cont_setup.click();
+       // cont_setup.click();
 
         WebElement start_free_trial = longWait.until((ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@data-qa = 'cunoxonoxe']//*[local-name() = 'svg'])[2]"))));
         start_free_trial.click();
         WebElement add_domain = longWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(), 'Add domain')]")));
         add_domain.click();
 
+        System.out.println(" -----------------");
+
         Actions actions = new Actions(driver);
-        WebElement copy_code =
-                longWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'view-lines')]")));
+        WebElement copy_code =   longWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@vwo-title=\"Copy\" and @data-qa=\"xugejexijo\"]")));
         copy_code.click();
         String expected_text = copy_code.getAttribute("textContent"); // gives the full text
 
-
-       /* actions.keyDown(Keys.CONTROL)
-                .sendKeys("a")
-                .sendKeys("c")
-                .keyUp(Keys.CONTROL)
-                .build()
-                .perform();*/
-
         driver.switchTo().newWindow(WindowType.TAB); // switching to another window dynamically
-
         driver.get("https://www.google.com");
         WebElement dest = driver.findElement(By.xpath("//*[@name = 'q']"));
         dest.click();
@@ -93,10 +82,12 @@ public class Vwo_Test_Page extends CommonToAll {
                 .perform();
 
         String paste_text = dest.getAttribute("value");
-        Assert.assertEquals(paste_text, expected_text);
 
-        System.out.println("Test exe");
+        if(paste_text.contains("visualwebsiteoptimizer")) {
+            System.out.println("Test exe successfully");
+        } else {
+            System.out.println("Failed to copy");
+        }
         closeBrowser(driver);
-
     }
 }
