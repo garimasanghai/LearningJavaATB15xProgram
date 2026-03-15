@@ -32,7 +32,7 @@ public class Vwo_Test_Page extends CommonToAll {
         }
 
         WebElement bussId = waitForVisibility(driver, 3, By.xpath("//input[@data-qa= 'page-su-step1-v1-email']"));
-        bussId.sendKeys("sgh99@tempumail.cc");
+        bussId.sendKeys("sgh86@tempumail.cc");
         WebElement freeTrial_cb = driver.findElement(By.xpath("//input[contains(@data-qa , 'page-free-trial-step1')]"));
         freeTrial_cb.click();
         WebElement freeTrial_box = driver.findElement(By.xpath("//button[contains(text() , 'Create a Free Trial')]"));
@@ -56,9 +56,8 @@ public class Vwo_Test_Page extends CommonToAll {
 
         System.out.println("Test exe");
 
-        WebElement cont_setup = longWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-qa=\"boxasuraza\"]")));
-
-       // WebElement cont_setup = longWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(), 'Save')]")));
+        WebElement cont_setup = longWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Continue')]")));
+        // WebElement cont_setup = longWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(), 'Save')]")));
         cont_setup.click();
 
         WebElement start_free_trial = longWait.until((ExpectedConditions.elementToBeClickable(By.xpath("(//button[@data-qa = 'cunoxonoxe']//*[local-name() = 'svg'])[2]"))));
@@ -68,10 +67,10 @@ public class Vwo_Test_Page extends CommonToAll {
 
         Actions actions = new Actions(driver);
         WebElement copy_code =
-                longWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@vwo-title = 'Copy']")));
+                longWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'view-lines')]")));
         copy_code.click();
-                   //     "(//div[contains(@class, 'monaco-scrollable-element')])[1]")));
         String expected_text = copy_code.getAttribute("textContent"); // gives the full text
+
 
        /* actions.keyDown(Keys.CONTROL)
                 .sendKeys("a")
@@ -95,6 +94,9 @@ public class Vwo_Test_Page extends CommonToAll {
 
         String paste_text = dest.getAttribute("value");
         Assert.assertEquals(paste_text, expected_text);
+
+        System.out.println("Test exe");
+        closeBrowser(driver);
 
     }
 }
