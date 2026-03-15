@@ -1,6 +1,6 @@
 package Handling_Alerts;
 
-import BaseClass.CommonToAll;
+import Base_Class.CommonToAll;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
