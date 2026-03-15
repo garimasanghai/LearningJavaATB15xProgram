@@ -32,7 +32,7 @@ public class Vwo_Test_Page extends CommonToAll {
         }
 
         WebElement bussId = waitForVisibility(driver, 3, By.xpath("//input[@data-qa= 'page-su-step1-v1-email']"));
-        bussId.sendKeys("sgh86@tempumail.cc");
+        bussId.sendKeys("sgh393@tempumail.cc");
         WebElement freeTrial_cb = driver.findElement(By.xpath("//input[contains(@data-qa , 'page-free-trial-step1')]"));
         freeTrial_cb.click();
         WebElement freeTrial_box = driver.findElement(By.xpath("//button[contains(text() , 'Create a Free Trial')]"));
@@ -56,13 +56,13 @@ public class Vwo_Test_Page extends CommonToAll {
 
         System.out.println("Test exe");
 
-        WebElement cont_setup = longWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Continue')]")));
+        WebElement cont_setup = longWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),'Continue')]")));
         // WebElement cont_setup = longWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(), 'Save')]")));
         cont_setup.click();
 
-        WebElement start_free_trial = longWait.until((ExpectedConditions.elementToBeClickable(By.xpath("(//button[@data-qa = 'cunoxonoxe']//*[local-name() = 'svg'])[2]"))));
+        WebElement start_free_trial = longWait.until((ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@data-qa = 'cunoxonoxe']//*[local-name() = 'svg'])[2]"))));
         start_free_trial.click();
-        WebElement add_domain = longWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(), 'Add domain')]")));
+        WebElement add_domain = longWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(), 'Add domain')]")));
         add_domain.click();
 
         Actions actions = new Actions(driver);
