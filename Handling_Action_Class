@@ -64,11 +64,21 @@ actions.dragAndDrop(source, target).perform();
 Keyboard Combination:
 Actions actions = new Actions(driver);
 actions.keyDown(Keys.CONTROL)
-       .sendKeys("a")
+       .sendKeys("a")    // Select all
+       .sendKeys("c")    // Copy
        .keyUp(Keys.CONTROL)
        .perform();
 
+actions.click(searchBox)
+       .keyDown(Keys.CONTROL)
+       .sendKeys("v")         // Paste
+       .keyUp(Keys.CONTROL)
+       .perform();
 
+actions.sendKeys(Keys.PAGE_DOWN)  // Scroll down the page
+       .sendKeys(Keys.PAGE_DOWN)  // Scrolls further down
+       .build()
+       .perform();
 
 actions.click(goingTextbox)      // Moves the cursor to the element
        .sendKeys("del")

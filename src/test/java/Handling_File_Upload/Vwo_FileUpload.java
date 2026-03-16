@@ -39,9 +39,6 @@ public class Vwo_FileUpload extends CommonToAll {
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(), 'Profile details')]")));
         profileBtn.click();
 
-        /*Actions actions = new Actions(driver);
-        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).build().perform();
-*/
         WebElement uploadPic =
                 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type = 'file']")));
         uploadPic.sendKeys("D:\\FileUpload_Selenium\\Screenshot 2026.png");
