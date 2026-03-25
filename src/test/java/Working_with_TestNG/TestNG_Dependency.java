@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class TestNG_Dependency {
 
     /*
-    dependsOnMethods = {"openApp"}) <--- pass this as parameter
+    dependsOnMethods = {"openApp", "abc", "..."}) <--- this attribute is available only for @Test annotation
     Depending on previous method for exe.
     If previous method passes,only then  it will exe, else rest all methods will get skipped
     */
