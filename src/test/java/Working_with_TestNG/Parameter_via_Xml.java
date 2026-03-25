@@ -12,6 +12,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+
+// THIS CLASS WILL RUN ONLY VIA testNG_param_via.xml FILE!!
+
 public class Parameter_via_Xml {
     WebDriver driver;
     WebDriverWait wait;
@@ -19,7 +22,7 @@ public class Parameter_via_Xml {
     @BeforeClass
     @Parameters({"browser"})
     void setup(String br){      // <--- the value of the browser from testNG_param.xml will get populated here & exe
-       switch(br){
+       switch(br.toLowerCase()){        // <--- coz setup method is responsible for launching the browser
            case"chrome": driver = new ChromeDriver(); break;
            case"edge": driver = new EdgeDriver(); break;
            case"firefox": driver = new FirefoxDriver(); break;
@@ -46,6 +49,7 @@ public class Parameter_via_Xml {
     @Test(priority = 3)
     void testUrl(){
         Assert.assertEquals(driver.getCurrentUrl(), "https://awesomeqa.com/hr/web/index.php/auth/login");
+        System.out.println("Parameter_via_Xml exe");
     }
 
     @AfterClass

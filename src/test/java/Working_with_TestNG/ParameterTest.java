@@ -37,6 +37,7 @@ public class ParameterTest {
     @Test(priority = 3)
     void testUrl(){
         Assert.assertEquals(driver.getCurrentUrl(), "https://awesomeqa.com/hr/web/index.php/auth/login");
+        System.out.println("ParameterTest exe");
     }
 
     @AfterClass

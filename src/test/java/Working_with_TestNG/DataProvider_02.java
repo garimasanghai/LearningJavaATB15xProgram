@@ -45,7 +45,7 @@ public class DataProvider_02 {
         String actualMsg= "Your email, password, IP address or location did not match";
 
         Assert.assertEquals(errorMessage, actualMsg );
-        System.out.println("Test exe");
+        System.out.println("DataProvider_02 exe");
     }
 
     @AfterClass
