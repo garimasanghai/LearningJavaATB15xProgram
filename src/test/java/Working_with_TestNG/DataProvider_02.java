@@ -53,7 +53,7 @@ public class DataProvider_02 {
         driver.quit();
     }
 
-    @DataProvider(name = "dp")    // <--- DP mostly returns two-dimensional Object type array
+    @DataProvider(name = "dp", indices = {0,1})    // <--- DP mostly returns two-dimensional Object type array
     public Object[][] loginData(){
         Object data [][] = {
                 {"admin@admin.com", "admin123"},          // valid
