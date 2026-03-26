@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Learning Suite">
     <listeners>
-        <listener class-name="Working_with_TestNG_Listeners.TestNG_Listeners"/>
+        <listener class-name="Working_with_TestNG_Listeners.ExtentReportManager"/>
     </listeners>
     <test name="Test">
         <parameter name="browser" value="chrome"/>

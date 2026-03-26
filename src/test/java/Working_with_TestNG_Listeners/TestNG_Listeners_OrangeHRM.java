@@ -7,9 +7,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-public class TestNG_OrangeHRM {
+@Listeners(Working_with_TestNG_Listeners.TestNG_Listeners.class)  // <--- mention pkg along with className.class
+public class TestNG_Listeners_OrangeHRM {
     WebDriver driver;
     WebDriverWait wait;
 
