@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class OrangeCRM_Demo01 {
+public class Orange_CRM {
     @Test
     public void test_OHRM_login() {
         WebDriver driver = new ChromeDriver();
