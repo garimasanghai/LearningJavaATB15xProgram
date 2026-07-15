@@ -3,6 +3,7 @@ package OOPS_Concepts.Constructors;
 public class Types {
     String name;
     Types(){
+
         System.out.println("Calling No args Cons");
     }
 

@@ -1,4 +1,4 @@
-package Java_Basic_Practice;
+package Java_Basic_Practice.Revise;
 
 public class Demo1 {
     public static void main(String[] args) {

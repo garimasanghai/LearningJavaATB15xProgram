@@ -1,4 +1,4 @@
-package Java_Basic_Practice;
+package Java_Basic_Practice.Revise;
 
 import java.util.Scanner;
 

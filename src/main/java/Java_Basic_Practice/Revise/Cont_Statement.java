@@ -1,10 +1,10 @@
-package Java_Basic_Practice;
+package Java_Basic_Practice.Revise;
 
-public class Brk_Statement {
+public class Cont_Statement {
     public static void main(String[] args) {
-        for(int i = 0; i <= 10; i ++){
+        for(int i = 1; i <=10; i ++){
             if(i == 5){
-                break;
+                continue;
             }
             System.out.println(i);
         }
